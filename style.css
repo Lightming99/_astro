@@ -38,7 +38,7 @@ a {
     background: url('saturn.png') bottom center / cover no-repeat;
   }
   66% {
-    background: url('mercury.avif') bottom center / cover no-repeat;
+    background: url('mercury.jpg') bottom center / cover no-repeat;
   }
   100% {
     background: url('jupiter.png') bottom center / cover no-repeat;
