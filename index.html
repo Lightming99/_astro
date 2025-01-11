@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Astrology</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="style.css">
+<style>
+    #toggleMenu {
+      display: none; /* Initially hidden */
+      margin-top: 10px; /* Adjust this value as needed */
+    }
+    #videoPlayer {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: 80%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    #videoPlayer iframe {
+      width: 100%;
+      height: 90%;
+      border: none;
+    }
+    #videoPlayer .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.7);
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1001;
+    }
+    .button-container {
+      display: flex;
+      gap: 10px; /* Adjust the gap as needed */
+      justify-content: center; /* Center the buttons horizontally */
+      margin-top: 20px; /* Add some space above the buttons */
+    }
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background-color: blue;
+      color: white;
+    }
+    .btn-secondary {
+      background-color: green;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header id="main">
+	<div class="container">
+		<nav>
+			 <div class="logo-container">
+        <!-- Saturn with its revolving ring -->
+        <div class="saturn-system">
+            <div class="saturn"></div>
+            <div class="tilted-ring"></div>
+        </div>
+
+        <!-- Website name -->
+ <div class="logo-name">
+    <span>A</span>
+    <span>S</span>
+    <span>T</span>
+    <span>R</span>
+    <span>O</span>
+     <span>S</span>
+    <span>A</span>
+    <span>T</span>
+    <span>V</span>
+    <span>I</span>
+        <span>K</span>
+  </div>
+
+    </div>
+			<ul class="nav-list">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="course.html">Professional Courses</a></li>
+				<li><a href="us.html">Consult Us</a></li>
+				<li><a href="about.html">About Us</a></li>
+				<li><a href="help.html">Help</a></li>
+				<li>
+          <li>
+            <a href="https://wa.me/9459412030?text=Hello,%20I%20am%20interested%20in%20your%20services%20reached%20through%20website" target="_blank">
+              <img src="whatsapp.svg" alt="Whatsapp" / height="40px" width="40px">
+            </a>
+          </li>
+        </li>
+			</ul>
+			<img src="icon.png" class="menu-btn">
+		</nav>
+
+<div class="main-content">
+	<h1 class="intro-heading"> We all Love</h1>
+	<h1 class="main-heading">Perfection</h1>
+	<p>Astro Satvik Provides best consultation and teaching services in astrology, Don't forget to try our New Uploads Section </p>
+  <div class="button-container">
+   <a href="course.html"> <button class="btn btn-secondary">Courses</button></a>
+   <a href="us.html"> <button class="btn btn-primary">Consult Now</button></a>
+  </div>
+</div>
+</div>
+</header>
+
+
+<div class="box">
+        <p id="box-text">If you are CONFUSED From where to PURCHASE GENUINE GEMSTONES<br>HERE ARE WE TO HELP!</p>
+        <a 
+        href="https://wa.me/9459412030?text=Hello,%20I%20am%20interested%20in%20purchasing%20gemstones.%20Could%20you%20please%20provide%20me%20with%20more%20details%20about%20the%20available%20options,%20pricing,%20and%20shipping?"
+        target="_blank" 
+        class="whatsapp-button">
+        WhatsApp Us
+      </a>
+    </div>
+
+<section id="services">
+	<div class="container">
+		<div class="section-title">
+			<h1> Our New Uploads </h1>
+			<div class="line"></div>
+				
+			</div>
+
+			<div class="services">
+		
+		<div class="service">
+			<img src="influence_4.jpg" onclick="openVideo('https://www.youtube.com/embed/fJ1wGLIcpVs?autoplay=1&controls=1&showinfo=0&rel=0&modestbranding=1')"><br><br>
+			<h3>Venus in 12 Houses</h3>
+			<p>Discover the influence of Venus in each of the 12 astrological houses! From enhancing personal charm and financial success to promoting deep emotional bonds and creative expression, learn how Venus shapes different aspects of your life based on its house placement!. <br><br>Click the Image Please.</p>
+		</div>
+
+		<div class="service">
+			<img src="2025.webp" onclick="openVideo('https://www.youtube.com/embed/l_DnscOmkhQ?autoplay=1&controls=1&showinfo=0&rel=0&modestbranding=1')"><br><br>
+			<h3>Predictions For 2025</h3>
+			<p>Discover what 2025 holds for you with these captivating astrology predictions! Explore insights into zodiac signs, cosmic alignments, and planetary influences that shape the year ahead. A journey into the stars awaits!<br><br>Click the Image Please!.</p>
+		</div>
+
+		<div class="service">
+      <img src="influence_5.jpg" onclick="openVideo('https://www.youtube.com/embed/AcJE-ceRCHk?autoplay=1&controls=1&showinfo=0&rel=0&modestbranding=1')"><br><br>
+			<h3>Parivartan Yogas For Wealth</h3>
+			<p> Uncover the deeper meanings of your horoscope as we explore the effects of Parivartan Yogas and their influence on various aspects of life. Gain clarity on how these celestial events shape your destiny! <br><br>Click the Image Please!.</p>
+		</div>
+
+		</div>
+	</div>
+
+</section>
+
+<section id="img-slider">
+		<h1 id="slider-heading"> OUR REVIEWS OUR PRIDE</h1>
+         <div class="lines"> </div>
+		<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="review_zero.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="review_one.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="review_four.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="review_five.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="review_three.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+	
+</section>
+	<section id="services">
+	<div class="container">
+		<div class="section-title">
+			<h1> Our Ebooks </h1>
+			<div class="line"></div>
+				
+			</div>
+
+			<div class="services">
+		
+		<div class="service">
+			<a href="Parivartan and Rajyogas.pdf" target="_blank"><img src="influence_2.jpg"></a><br><br>
+			<h3>Parivartan and Rajyogas</h3>
+			<p>:When two planets exchange their zodiac signs, forming a powerful connection that can bring significant changes in one's life.<br><br>Click the Image Please!.</p>
+		</div>
+
+		<div class="service">
+			<a href="Vedic Stories of Planetary Friendships and Conflicts.pdf" target="_blank"><img src="influence_3.jpg"></a><br><br>
+			<h3>Vedic Stories of Planetary Friendships and Conflicts</h3>
+			<p>: Dive into captivating Vedic tales that unravel the cosmic friendships and conflicts among planets, revealing profound astrological insights and timeless wisdom.<br><br>Click the Image Please!.</p>
+		</div>
+
+		<div class="service">
+			<a href="Saturn in 12 houses.pdf" target="_blank"><img src="influence.jpg"></a><br><br>
+			<h3>Saturn in 12 houses</h3>
+			<p>: Explore the profound influence of Saturn in each of the 12 astrological houses, shaping discipline, responsibility, and growth in various aspects of life.<br><br>Click the Image Please!.</p>
+		</div>
+
+		</div>
+	</div>
+
+</section>
+
+<div id="toggleMenu" class="slideshow-container">
+  <!-- Your existing code for the slideshow -->
+</div>
+
+
+
+<div id="videoPlayer">
+  <button class="close-btn" onclick="closeVideo()">×</button>
+  <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+
+  <footer>
+        <div id="logo">
+            <img src="astro.png" alt="Logo" />
+        </div>
+        
+        <div id="footer-links">
+          <a href="index.html">Home</a>
+          <a href="term.html" target="_blank">Terms and Conditions</a>
+          <a href="us.html">Consult Us</a>
+          <a href="about.html">About Us</a>
+          <a href="help.html">Help</a>
+      </div>
+
+      <div id="social-media">
+          <a href="https://www.facebook.com/Astro.Satvik.26.2001" target="_blank"><img src="facebook.svg" alt="Facebook" /></a>
+
+          <a href="https://www.instagram.com/astro.satvik/?next=%2F"target="_blank"><img src="instagram.svg" alt="Instagram" /></a>
+          <a href="https://www.youtube.com/@AstroSatvik026"target="_blank"><img src="linkedin.svg" alt="youtube" /></a>
+      </div>
+    </footer>
+
+	<script>
+const navBtn = document.querySelector('.menu-btn')
+const navList = document.querySelector('.nav-list')
+
+navBtn.addEventListener('click', function(){
+	navList.classList.toggle('active')
+	
+});
+// Close the navbar if user clicks outside of it
+document.addEventListener('click', function(event) {
+    const isClickInside = navList.contains(event.target) || navBtn.contains(event.target);
+
+    if (!isClickInside) {
+        navList.classList.remove('active');
+    }
+});
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 8000); // Change image every 2 seconds
+}
+
+function toggleMenu() {
+    var toggleMenu = document.getElementById('toggleMenu');
+    if (toggleMenu.style.display === 'none' || toggleMenu.style.display === '') {
+      toggleMenu.style.display = 'block';
+    } else {
+      toggleMenu.style.display = 'none';
+    }
+  }
+
+  document.addEventListener('click', function(event) {
+    var toggleMenu = document.getElementById('toggleMenu');
+    var toggleButton = document.querySelector('button[onclick="toggleMenu()"]');
+    var isClickInside = toggleMenu.contains(event.target) || toggleButton.contains(event.target);
+
+    if (!isClickInside) {
+      toggleMenu.style.display = 'none';
+    }
+  });
+
+  function openVideo(url) {
+    var videoPlayer = document.getElementById('videoPlayer');
+    var iframe = videoPlayer.querySelector('iframe');
+    iframe.src = url;
+    videoPlayer.style.display = 'block';
+  }
+
+  function closeVideo() {
+    var videoPlayer = document.getElementById('videoPlayer');
+    var iframe = videoPlayer.querySelector('iframe');
+    iframe.src = '';
+    videoPlayer.style.display = 'none';
+  }
+</script>
+
+</body>
+
+</html>7

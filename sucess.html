@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultation Booked</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif; /* More elegant font */
+            margin: 0;
+            overflow: hidden; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+            background: linear-gradient(to right, #e0eafc, #cfdef3, #e0eafc);
+            background-size: 400% 400%; 
+            animation: gradientAnimation 15s ease infinite; 
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #333; 
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1em;
+            font-family: 'Pacifico', cursive; /* Fancy heading font */
+            animation: colorChange 8s infinite alternate; 
+        }
+
+        p {
+            color: #555; /* Slightly darker than the background */
+            font-size: 1.1em;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background-color: #333; 
+            color: #fff; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            font-family: 'Arial', sans-serif;
+        }
+
+        button:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 1s ease; 
+        }
+
+        .address {
+            margin-top: 20px;
+            color: #555; /* Matching paragraph color */
+            font-size: 1.2em;
+        }
+
+        .slogan {
+            margin-top: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333; 
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            font-family: 'Pacifico', cursive; /* Same as heading */
+        }
+
+        .bill-section {
+            margin-top: 20px; 
+            color: #555; /* Matching paragraph color */
+            font-size: 1.2em;
+        }
+
+        .bill-button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #6a82fb; 
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            margin-top: 10px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .bill-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes gradientAnimation {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        @keyframes colorChange {
+            0% {color: #333;}
+            50% {color: #6a82fb;} 
+            100% {color: #a6c0fe;} 
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            button {
+                font-size: 1em;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Your consultation/course is  on booking! (IF YOU SENT THE MESSAGE  ON WHATSAPP)</h1>
+        <p>You will receive an update soon.</p>
+     <a href="index.html"> <button>Explore Home</button> </a> 
+
+        <div class="bill-section">
+            <p>If your are still confused or not booked your consultation/Course or your details were not filled automatically please contact <b>9459412030</b> or click button below to be taken on whatsapp<br> If already taken on whatsapp please Ignore</p>
+            <a href="https://wa.me/9459412030?text=Hello%20Astro%20Satvik%20I%20am%20confused%20about%20my%20consultation%20please%20help%20me">
+                <button class="bill-button">Consult Direct</button>
+            </a>
+        </div>
+
+        <div class="address">
+            Jai Bhawan<br>
+            SummerHill Shimla<br>
+            Himachal Pradesh, Pincode 171005.<br>
+            Phone Number: 94594-12030
+        </div>
+        <div class="slogan">We Love Perfection</div>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = "index.html"; 
+        }, 60000); 
+    </script>
+</body>
+</html>

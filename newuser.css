@@ -1,0 +1,407 @@
+/* General Styling */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header Styling */
+header {
+   background: linear-gradient(to right, #243B55, #141E30);
+  background-size: 200% 100%;
+  animation: gradient 15s ease infinite;
+  color: white;
+  padding: 20px 0; 
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation List Styling */
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-list li a {
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+  color: #f5a623;
+}
+
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f5a623;
+  transition: width 0.3s ease;
+}
+
+.nav-list li a:hover::after {
+  width: 100%;
+}
+
+/* Saturn System */
+.saturn-system {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+/* Saturn Styling */
+.saturn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle at 20px 20px, #f6f0b2, #d9b38c);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+  animation: saturnPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes saturnPulse {
+  from {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+/* Tilted, Bold Revolving Ring */
+.tilted-ring {
+  position: absolute;
+  width: 100px;
+  height: 15px;
+  background: linear-gradient(45deg, #f06, #90f);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(25deg);
+  animation: rotateRing 8s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes rotateRing {
+  0% {
+    transform: translate(-50%, -50%) rotate(385deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(25deg);
+  }
+}
+
+/* Logo Styling */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-name {
+  font-size: 30px;
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Menu Button Styling */
+.menu-btn {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10; /* Ensure it is above overlay */
+}
+
+.menu-bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-btn.cross .menu-bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-btn.cross .menu-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.cross .menu-bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Overlay Menu */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay.active {
+  left: 50%;
+}
+
+.overlay-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.overlay a {
+  color: #1d2671;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.overlay a:hover {
+  color: #f06;
+}
+
+/* Main Content */
+.main-content {
+  text-align: center;
+}
+
+.gradient-heading {
+  display: inline-block;
+  animation: colorShift 3s infinite;
+}
+
+@keyframes colorShift {
+  0% {
+    background: linear-gradient(to right, #ff6f61, #ffb74d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  50% {
+    background: linear-gradient(to right, #ab47bc, #7e57c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  100% {
+    background: linear-gradient(to right, #ff6f61, #ffb74d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: flex;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .overlay-list {
+    gap: 30px;
+  }
+}
+
+/* Payment Form Section */
+#payment-form-course {
+  background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+  margin: 0;
+  padding: 30px 20px; /* Add horizontal padding to the section */
+}
+
+.form-container {
+  width: 90%; 
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px; 
+  border-radius: 15px;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 15px; /* Reduced margin */
+      color: #333;
+      font-size: 1.8em; /* Slightly larger heading */
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input, button {
+      margin-bottom: 10px; /* Reduced margin */
+      padding: 10px; /* Reduced padding */
+      font-size: 16px;
+      border-radius: 5px; /* Smaller border radius */
+      border: 1px solid #ddd;
+    }
+
+    input:focus {
+      outline: none;
+      box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+      border-color: rgba(81, 203, 238, 1);
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border: none;
+      padding: 12px; /* Slightly more padding for button */
+      font-size: 1.1em; /* Slightly larger button text */
+    }
+
+    button:hover {
+      background-color: #0069d9;
+    }
+
+/*footer section*/
+footer {
+background-color: #243B55; 
+  color: white;
+  padding: 40px 20px; 
+  text-align: center; 
+}
+
+#logo img {
+    width: 100px;
+    animation: logoSlideIn 2s ease-in-out;
+}
+
+/* ... (logo and social media styles) ... */
+
+/* Responsive Footer Links */
+#footer-links {
+  margin-bottom: 20px;
+}
+
+#footer-links a {
+  display: block; /* Stack links vertically on smaller screens */
+  margin: 10px 0;  /* Add vertical margin for spacing */
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Media Query for Smaller Screens */
+@media (min-width: 768px) { 
+  #footer-links a {
+    display: inline-block; /* Display links inline on larger screens */
+    margin: 0 10px;  /* Switch to horizontal margin */
+  }
+}
+
+
+#footer-links a:hover {
+  color: #f5a623; /* Gold hover color */
+}
+
+#social-media a {
+  display: inline-block;
+  margin: 0 10px; 
+}
+
+#social-media img {
+  width: 30px; /* Adjust icon size as needed */
+  height: auto;
+  transition: transform 0.2s ease;
+}
+
+#social-media img:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+}
+
+.instructions {
+  padding: 20px;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color:  #333;
+}
+
+.instructions h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.instructions ul {
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.instructions ul li {
+  margin-bottom: 10px;
+}
+
+.instructions p {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,0 +1,143 @@
+﻿<!doctype html>
+<html>
+<head>
+<title> astrology </title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" type="text/css" href="course.css">
+</head>
+<body>
+
+<header id="main">
+    <div class="container">
+        <nav>
+             <div class="logo-container">
+        <!-- Saturn with its revolving ring -->
+        <div class="saturn-system">
+            <div class="saturn"></div>
+            <div class="tilted-ring"></div>
+        </div>
+
+        <!-- Website name -->
+        <h1 class="logo-name">ASTRO SATVIK</h1>
+
+    </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="course.html">Professional Courses</a></li>
+                <li><a href="us.html">Consult Us</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><button class="btn btn-secondary" onclick="openPopup()">SignIn/Up</button></li>
+            </ul>
+            <img src="icon.png" class="menu-btn">
+        </nav>
+
+        <div class="main-content">
+            <h1 class="intro-heading"> We all Love</h1>
+            <h1 class="main-heading">Perfection</h1>
+            <p>Astro Satvik Provides best consultation and teaching services in astrology, Don't forget to try our New Uploads Section </p>
+          <div class="button-container">
+            <button class="btn btn-secondary" onclick="openPopup()">Sign IN</button>
+            <a href="us.html"><button class="btn btn-primary"> Consult Now</button></a>
+          </div>
+        </div>
+</div>
+</header>
+
+<section class="webinar">
+    <div class="webinar-overlay"></div>
+    <div class="webinar-container">
+      <h2 class="webinar-title">3-5 Hour Webinar on Career and Wealth</h2>
+      <p class="webinar-date">Vasant Panchmi, 2nd February, Sunday at 6 PM</p>
+      <div class="webinar-content">
+        <h3>Contents:</h3>
+        
+          <p>3 Rare Unknown methods of finding the right career</p><br>
+          <p>Using Jaimini astrology for finding career using Karakamsha and rare Jaimini Navamsha chart</p></li><br>
+          <p>First income or first job or financial gains timing using:</p></li><br>
+          <ul>
+            <li>Char Dasha snapshot method</li>
+            <li>Nadi transits</li>
+            <li>D9 Navamsha transits</li>
+            <li>Rare Dasha rules</li>
+          </ul>
+        
+        <p>Fees: 3300 Rs</p>
+        <p>In case of payment through PayPal, fees is 3500 Rs</p>
+        <p>Batch size is only 50 students, so admissions will be given on a first-come, first-served basis.</p>
+        <p>Recording of the webinar will be provided for lifelong validity but can only be viewed on a single device and single account and cannot be screen recorded or shared.</p>
+        <p>Platform: Zoom</p>
+        <div class="button-container">
+            <button class="btn btn-primary" onclick="registerNow()">Register Now</button>
+          </div>
+      </div>
+    </div>
+  </section>
+
+    <div class="video-container">
+        <div id="player"></div>
+    </div>
+
+    
+
+    <section class="carousel">
+        <h1 id="slider-heading">Beginer To Advance In ASTRO</h1>
+         <div class="carousel-container">
+        <div class="carousel-images" id="carouselImages">
+            <img src="jupiter.png" alt="Image 1" onclick="openPopup()">
+            <img src="jupiter.png" alt="Image 2" onclick="openPopup()">
+            <img src="sun.jpeg" alt="Image 3" onclick="openPopup()">
+        </div>
+    </div>
+
+    <div class="flexible-box">
+        <p id="p-text">Unlock the ancient wisdom of Vedic Astrology and transform your understanding of the cosmos with Astro Satvik's comprehensive "Beginner to Advanced Astrology" course. Journey from the fundamental principles to advanced predictive techniques as you master time-tested methods that have guided seekers for millennia. Learn to decode birth charts, understand planetary influences, and gain profound insights into life's greatest questions through authentic Vedic teachings. Whether you're taking your first steps into astrology or seeking to deepen your practice, this carefully crafted course reveals the powerful techniques that actually work in real-world readings. </p>
+        <ul id="flexbox-links">
+        <li><a href="newuser.html" ><button id="enroll">Enroll Now</button></a></li>
+    </ul>
+    </div>
+
+
+    <div class="popup-overlay" id="popupOverlay" onclick="closePopup(event)">
+        <div class="popup-content">
+            <h2>Sign In/Sign Up</h2><br>
+            <form id="authForm">
+                <input type="email" id="email" placeholder="Email ID" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit" id="loginButton">Login</button>
+                <a href="help.html" >Forgot Password</a>
+            <button type="button" id="signupButton">New Student? Sign Up</button>
+            </form>
+        </div>
+    </div>
+   </section>
+
+
+
+     <footer>
+        <div id="logo">
+            <img src="astro.png" alt="Logo" />
+        </div>
+        
+        <div id="footer-links">
+            <a href="index.html">Home</a>
+            <a href="term.html"target="_blank">Terms and Conditions</a>
+            <a href="us.html">Consult Us</a>
+            <a href="about.html">About Us</a>
+            <a href="help.html">Help</a>
+        </div>
+
+        <div id="social-media">
+            <a href="https://www.facebook.com/Astro.Satvik.26.2001" target="_blank"><img src="facebook.svg" alt="Facebook" /></a>
+
+            <a href="https://www.instagram.com/astro.satvik/?next=%2F"target="_blank"><img src="instagram.svg" alt="Instagram" /></a>
+            <a href="https://www.youtube.com/@AstroSatvik026"target="_blank"><img src="linkedin.svg" alt="youtube" /></a>
+        </div>
+    </footer>
+
+<script src="course.js"></script>
+</body>
+</html>
