@@ -72,7 +72,7 @@ Please confirm the next steps. Thank you!
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
     // WhatsApp API URL
-    const whatsappNumber = '9459412030'; // Replace with your WhatsApp number in international format (e.g., 919876543210)
+    const whatsappNumber = '+919459412030'; // Replace with your WhatsApp number in international format (e.g., 919876543210)
     const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${encodedMessage}`;
 
     // Open WhatsApp chat in a new tab
