@@ -117,5 +117,5 @@ document.getElementById('signupButton').addEventListener('click', function () {
 });
 
 function registerNow() {
-    window.open("https://wa.me/9459412030?text=Hi%20interested%20for%20Webinar%20tell%20me%20next%20steps", "_blank");
+    window.open("https://wa.me/+919459412030?text=Hi%20interested%20for%20Webinar%20tell%20me%20next%20steps", "_blank");
   }
