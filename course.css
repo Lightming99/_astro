@@ -1,4 +1,4 @@
-﻿* {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -315,93 +315,77 @@ body, html {
     color: blue;
     font-size: 15px;
 }
-.webinar {
-    position: relative;
-    overflow: hidden;
-    padding: 40px 20px;
-    margin: 20px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background: url('webinaar_1.jpeg') no-repeat center center;
-    background-size: cover;
-    animation: slide 30s linear infinite;
-    opacity: 0.9;
-  }
-  
-  @keyframes slide {
-    0% { background-image: url('webinaar_1.jpeg'); }
-    100% { background-image: url('webinaar_2.jpeg');}
-  }
-  
-  .webinar-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    
-  }
-  
-  .webinar-container {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
+/* Webinar container: Reduce upper space */
+.webinar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
     text-align: center;
-    color: white; /* Ensure text is readable */
-  }
-  
-  .webinar-title {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    animation: fadeIn 2s ease-in-out;
-    background: linear-gradient(135deg, #ffd194 0%, #70e1f5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-  }
-  
-  .webinar-date {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    animation: fadeIn 2s ease-in-out 0.5s;
-    background:linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .webinar-content {
-    text-align: left;
-    animation: fadeIn 2s ease-in-out 1s;
-  
-    
-  }
-  
-  .webinar-content h3 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .webinar-content ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    background: linear-gradient(135deg, #ffd194 0%, #70e1f5 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-  }
-  
-  .webinar-content p {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bolder;
-  }
-  
+    margin-top: 10px; /* Reduced upper space */
+}
+
+/* Default webinar image styles */
+.webinar-image {
+    width: 100%;
+    max-width: 600px; /* Default width on desktop */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+}
+
+/* When user hovers on the image (desktop only) */
+.webinar-image:hover {
+    transform: scale(1.1); /* Slightly enlarge image */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Consistent behavior for mobile; no hover effect */
+@media screen and (max-width: 768px) {
+    .webinar-image {
+        max-width: 100%; /* Full width */
+    }
+    .webinar-image:hover {
+        transform: scale(1); /* No scaling effect */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Maintain normal shadow */
+    }
+}
+/* Button styles */
+.button-container {
+    text-align: center;
+    margin-top: 10px; /* Reduced space from the image */
+}
+
+.button-container button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: #fff;
+    background: linear-gradient(45deg, #536942, #FFD936);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth button effects */
+}
+
+.button-container button:hover {
+    transform: scale(1.1); /* Button zooms slightly on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow on button hover */
+}
+
+/* Fade-in effect for the image */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Slide in from above */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+    }
+}
+
+
+
