@@ -1,364 +1,207 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta name="google-site-verification" content="5ioq7L9iPz5sEKWlCFQq5QFJTzfHuKQdBv3H-5_eIIQ" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="5ioq7L9iPz5sEKWlCFQq5QFJTzfHuKQdBv3H-5_eIIQ" />
+    
+    <title>AstroSatvik - Celestial Insights & Guidance</title>
+    
+    <link rel="icon" href="favicon.webp" type="image/webp">
+    <link rel="icon" href="https://astrosatvik.com/favicon.ico">
+
+    <!-- Preload key images -->
     <link rel="preload" href="hero.png" as="image">
     <link rel="preload" href="saturn.png" as="image">
     <link rel="preload" href="mercury.jpg" as="image">
     <link rel="preload" href="jupiter.png" as="image">
-	<link rel="icon" href="favicon.webp" type="image/webp">
-	<link rel="icon" href="https://astrosatvik.com/favicon.ico">
-<title>AstroSatvik</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
-<meta name="viewport" content="width=device-width">
-<link rel="stylesheet" href="style.css">
-<style>
-    #toggleMenu {
-      display: none; /* Initially hidden */
-      margin-top: 10px; /* Adjust this value as needed */
-    }
-    #videoPlayer {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 80%;
-      height: 80%;
-      background-color: rgba(0, 0, 0, 0.8);
-      z-index: 1000;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-    #videoPlayer iframe {
-      width: 100%;
-      height: 90%;
-      border: none;
-    }
-    #videoPlayer .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      font-size: 24px;
-      color: white;
-      cursor: pointer;
-      background: rgba(0, 0, 0, 0.7);
-      border: none;
-      border-radius: 50%;
-      width: 30px;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1001;
-    }
-    .button-container {
-      display: flex;
-      gap: 10px; /* Adjust the gap as needed */
-      justify-content: center; /* Center the buttons horizontally */
-      margin-top: 20px; /* Add some space above the buttons */
-    }
-    .btn {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .btn-primary {
-      background-color: blue;
-      color: white;
-    }
-    .btn-secondary {
-      background-color: green;
-      color: white;
-    }
-  </style>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header id="main">
-	<div class="container">
-		<nav>
-			 <div class="logo-container">
-        <!-- Saturn with its revolving ring -->
-        <div class="saturn-system">
-            <div class="saturn"></div>
-            <div class="tilted-ring"></div>
+    <!-- Header Section -->
+    <header id="main-header">
+        <div class="container">
+            <nav>
+                <div class="logo-container">
+                    <div class="saturn-system">
+                        <div class="saturn-planet"></div>
+                        <div class="tilted-ring"></div>
+                    </div>
+                    <div class="logo-name">
+                        <span>A</span><span>S</span><span>T</span><span>R</span><span>O</span><span>S</span><span>A</span><span>T</span><span>V</span><span>I</span><span>K</span>
+                    </div>
+                </div>
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="course.html" class="nav-link">Professional Courses</a></li>
+                    <li><a href="us.html" class="nav-link">Consult Us</a></li>
+                    <li><a href="about.html" class="nav-link">About Us</a></li>
+                    <li><a href="help.html" class="nav-link">Help</a></li>
+                    <li>
+                        <a href="https://wa.me/+919459412030?text=Hello,%20I%20am%20interested%20in%20your%20services%20reached%20through%20website" target="_blank" class="whatsapp-icon-link">
+                            <img src="whatsapp.svg" alt="Whatsapp" class="whatsapp-icon">
+                        </a>
+                    </li>
+                </ul>
+                <button class="menu-toggle-btn" aria-label="Toggle Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+
+            <div class="hero-content">
+                <h1 class="intro-heading animate-on-scroll" data-animation-delay="0.2s">We all Love</h1>
+                <h1 class="main-heading animate-on-scroll" data-animation-delay="0.4s">Perfection</h1>
+                <p class="animate-on-scroll" data-animation-delay="0.6s">Astro Satvik Provides best consultation and teaching services in astrology. Don't forget to try our New Uploads Section!</p>
+                <div class="hero-buttons animate-on-scroll" data-animation-delay="0.8s">
+                   <a href="course.html"><button class="btn btn-secondary">Explore Courses</button></a>
+                   <a href="us.html"><button class="btn btn-primary">Consult Now</button></a>
+                </div>
+            </div>
         </div>
+    </header>
 
-        <!-- Website name -->
- <div class="logo-name">
-    <span>A</span>
-    <span>S</span>
-    <span>T</span>
-    <span>R</span>
-    <span>O</span>
-     <span>S</span>
-    <span>A</span>
-    <span>T</span>
-    <span>V</span>
-    <span>I</span>
-        <span>K</span>
-  </div>
-
-    </div>
-			<ul class="nav-list">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="course.html">Professional Courses</a></li>
-				<li><a href="us.html">Consult Us</a></li>
-				<li><a href="about.html">About Us</a></li>
-				<li><a href="help.html">Help</a></li>
-				<li>
-          <li>
-            <a href="https://wa.me/+919459412030?text=Hello,%20I%20am%20interested%20in%20your%20services%20reached%20through%20website" target="_blank">
-              <img src="whatsapp.svg" alt="Whatsapp" / height="40px" width="40px">
-            </a>
-          </li>
-        </li>
-			</ul>
-			<img src="icon.png" class="menu-btn">
-		</nav>
-
-<div class="main-content">
-	<h1 class="intro-heading"> We all Love</h1>
-	<h1 class="main-heading">Perfection</h1>
-	<p>Astro Satvik Provides best consultation and teaching services in astrology, Don't forget to try our New Uploads Section </p>
-  <div class="button-container">
-   <a href="course.html"> <button class="btn btn-secondary">Courses</button></a>
-   <a href="us.html"> <button class="btn btn-primary">Consult Now</button></a>
-  </div>
-</div>
-</div>
-</header>
-
-
-<div class="box">
-        <p id="box-text">If you are CONFUSED From where to PURCHASE GENUINE GEMSTONES<br>HERE ARE WE TO HELP!</p>
-        <a 
-        href="https://wa.me/9459412030?text=Hello,%20I%20am%20interested%20in%20purchasing%20gemstones.%20Could%20you%20please%20provide%20me%20with%20more%20details%20about%20the%20available%20options,%20pricing,%20and%20shipping?"
-        target="_blank" 
-        class="whatsapp-button">
-        WhatsApp Us
-      </a>
-    </div>
-
-<section id="services">
-	<div class="container">
-		<div class="section-title">
-			<h1> Our New Uploads </h1>
-			<div class="line"></div>
-				
-			</div>
-
-			<div class="services">
-		
-		<div class="service">
-			<img src="joker2.jpg" onclick="openVideo('https://www.youtube.com/embed/Wo5WhtsNVn0?autoplay=1&controls=1&showinfo=0&rel=0&modestbranding=1')"><br><br>
-			<h3>Sun in 12 Houses</h3>
-			<p>Discover how the Sun's placement in each of the 12 houses of your birth chart influences your personality, career, relationships, and spiritual growth. Join Astro Satvik as we delve into the unique traits and challenges associated with the Sun in each house, providing you with valuable insights to navigate life's journey. <br><br>Click the Image Please.</p>
-		</div>
-
-		<div class="service">
-			<img src="2025.webp" onclick="openVideo('https://www.youtube.com/embed/l_DnscOmkhQ?autoplay=1&controls=1&showinfo=0&rel=0&modestbranding=1')"><br><br>
-			<h3>Predictions For 2025</h3>
-			<p>Discover what 2025 holds for you with these captivating astrology predictions! Explore insights into zodiac signs, cosmic alignments, and planetary influences that shape the year ahead. A journey into the stars awaits!<br><br>Click the Image Please!.</p>
-		</div>
-
-		<div class="service">
-      <img src="joker.jpg" onclick="openVideo('https://www.youtube.com/embed/n_eQXAeVIx4?autoplay=1&controls=1&showinfo=0&rel=0&modestbranding=1')"><br><br>
-			<h3>Snapshot Method of Marriage Prediction</h3>
-			<p>Learn how to predict marriage prospects using the snapshot method, focusing on key astrological indicators like Venus and the 7th house. Astro Satvik guides you through the secrets of this technique, helping you gain insights into the timing and quality of your future relationships. <br><br>Click the Image Please!.</p>
-		</div>
-
-		</div>
-	</div>
-
-</section>
-
-<section id="img-slider">
-		<h1 id="slider-heading"> OUR REVIEWS OUR PRIDE</h1>
-         <div class="lines"> </div>
-		<!-- Slideshow container -->
-<div class="slideshow-container">
-
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 5</div>
-    <img src="review_zero.jpg" style="width:100%">
-    <div class="text"></div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 5</div>
-    <img src="review_one.jpg" style="width:100%">
-    <div class="text"></div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 5</div>
-    <img src="review_four.jpg" style="width:100%">
-    <div class="text"></div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">4 / 5</div>
-    <img src="review_five.jpg" style="width:100%">
-    <div class="text"></div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">5 / 5</div>
-    <img src="review_three.jpg" style="width:100%">
-    <div class="text"></div>
-  </div>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-
-<!-- The dots/circles -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-	
-</section>
-	<section id="services">
-	<div class="container">
-		<div class="section-title">
-			<h1> Our Ebooks </h1>
-			<div class="line"></div>
-				
-			</div>
-
-			<div class="services">
-		
-		<div class="service">
-			<a href="Parivartan and Rajyogas.pdf" target="_blank"><img src="influence_2.jpg"></a><br><br>
-			<h3>Parivartan and Rajyogas</h3>
-			<p>:When two planets exchange their zodiac signs, forming a powerful connection that can bring significant changes in one's life.<br><br>Click the Image Please!.</p>
-		</div>
-
-		<div class="service">
-			<a href="Vedic Stories of Planetary Friendships and Conflicts.pdf" target="_blank"><img src="influence_3.jpg"></a><br><br>
-			<h3>Vedic Stories of Planetary Friendships and Conflicts</h3>
-			<p>: Dive into captivating Vedic tales that unravel the cosmic friendships and conflicts among planets, revealing profound astrological insights and timeless wisdom.<br><br>Click the Image Please!.</p>
-		</div>
-
-		<div class="service">
-			<a href="Saturn in 12 Houses.pdf" target="_blank"><img src="influence.jpg"></a><br><br>
-			<h3>Saturn in 12 houses</h3>
-			<p>: Explore the profound influence of Saturn in each of the 12 astrological houses, shaping discipline, responsibility, and growth in various aspects of life.<br><br>Click the Image Please!.</p>
-		</div>
-
-		</div>
-	</div>
-
-</section>
-
-<div id="toggleMenu" class="slideshow-container">
-  <!-- Your existing code for the slideshow -->
-</div>
-
-
-
-<div id="videoPlayer">
-  <button class="close-btn" onclick="closeVideo()">×</button>
-  <iframe src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-</div>
-
-  <footer>
-        <div id="logo">
-            <img src="astro.png" alt="Logo" />
+   
+    <!-- New Uploads Section -->
+    <section id="new-uploads" class="content-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Our New Uploads</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="card-grid">
+                <div class="service-card animate-on-scroll" data-animation-delay="0.1s">
+                    <img src="joker2.jpg" alt="Sun in 12 Houses" onclick="openVideo('https://www.youtube.com/embed/Wo5WhtsNVn0?autoplay=1&controls=1&showinfo=0&rel=0&modestbranding=1')">
+                    <h3>Sun in 12 Houses</h3>
+                    <p>Discover how the Sun's placement influences your personality, career, relationships, and spiritual growth. Click the image to watch.</p>
+                </div>
+                <div class="service-card animate-on-scroll" data-animation-delay="0.2s">
+                    <img src="2025.webp" alt="Predictions for 2025" onclick="openVideo('https://www.youtube.com/embed/l_DnscOmkhQ?autoplay=1&controls=1&showinfo=0&rel=0&modestbranding=1')">
+                    <h3>Predictions For 2025</h3>
+                    <p>Explore insights into zodiac signs, cosmic alignments, and planetary influences that shape the year ahead. Click the image to watch.</p>
+                </div>
+                <div class="service-card animate-on-scroll" data-animation-delay="0.3s">
+                    <img src="joker.jpg" alt="Snapshot Method of Marriage Prediction" onclick="openVideo('https://www.youtube.com/embed/n_eQXAeVIx4?autoplay=1&controls=1&showinfo=0&rel=0&modestbranding=1')">
+                    <h3>Marriage Prediction Snapshot</h3>
+                    <p>Learn to predict marriage prospects using key astrological indicators like Venus and the 7th house. Click the image to watch.</p>
+                </div>
+                <!-- Add more video cards here as needed -->
+            </div>
         </div>
-        
-        <div id="footer-links">
-          <a href="index.html">Home</a>
-          <a href="term.html" target="_blank">Terms and Conditions</a>
-          <a href="us.html">Consult Us</a>
-          <a href="about.html">About Us</a>
-          <a href="help.html">Help</a>
-      </div>
+    </section>
 
-      <div id="social-media">
-          <a href="https://www.facebook.com/Astro.Satvik.26.2001" target="_blank"><img src="facebook.svg" alt="Facebook" /></a>
+    <!-- Reviews Section -->
+    <section id="reviews" class="content-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Our Reviews, Our Pride</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="slideshow-container animate-on-scroll" data-animation-delay="0.2s">
+                <div class="mySlides fade-anim">
+                    <img src="review_zero.jpg" alt="Review 1">
+                </div>
+                <div class="mySlides fade-anim">
+                    <img src="review_one.jpg" alt="Review 2">
+                </div>
+                <div class="mySlides fade-anim">
+                    <img src="review_four.jpg" alt="Review 3">
+                </div>
+                <div class="mySlides fade-anim">
+                    <img src="review_five.jpg" alt="Review 4">
+                </div>
+                <div class="mySlides fade-anim">
+                    <img src="review_three.jpg" alt="Review 5">
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+            <div style="text-align:center; margin-top: 20px;" class="animate-on-scroll" data-animation-delay="0.4s">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+    </section>
 
-          <a href="https://www.instagram.com/astro.satvik/?next=%2F"target="_blank"><img src="instagram.svg" alt="Instagram" /></a>
-          <a href="https://www.youtube.com/@AstroSatvik026"target="_blank"><img src="linkedin.svg" alt="youtube" /></a>
-      </div>
+    <!-- Ebooks Section -->
+    <section id="ebooks" class="content-section">
+        <div class="container">
+            <div class="section-title animate-on-scroll">
+                <h2>Our Ebooks</h2>
+                <div class="title-line"></div>
+            </div>
+            <div class="card-grid">
+                <div class="service-card ebook-card animate-on-scroll" data-animation-delay="0.1s">
+                    <a href="Parivartan and Rajyogas.pdf" target="_blank">
+                        <img src="influence_2.jpg" alt="Parivartan and Rajyogas Ebook">
+                    </a>
+                    <h3>Parivartan and Rajyogas</h3>
+                    <p>When two planets exchange signs, forming a powerful connection for life changes. Click image for PDF.</p>
+                </div>
+                <div class="service-card ebook-card animate-on-scroll" data-animation-delay="0.2s">
+                    <a href="Vedic Stories of Planetary Friendships and Conflicts.pdf" target="_blank">
+                        <img src="influence_3.jpg" alt="Vedic Stories of Planets Ebook">
+                    </a>
+                    <h3>Vedic Planetary Stories</h3>
+                    <p>Dive into Vedic tales of cosmic friendships and conflicts among planets. Click image for PDF.</p>
+                </div>
+                <div class="service-card ebook-card animate-on-scroll" data-animation-delay="0.3s">
+                    <a href="Saturn in 12 Houses.pdf" target="_blank">
+                        <img src="influence.jpg" alt="Saturn in 12 Houses Ebook">
+                    </a>
+                    <h3>Saturn in 12 Houses</h3>
+                    <p>Explore Saturn's profound influence in the 12 astrological houses. Click image for PDF.</p>
+                </div>
+                <!-- Add more ebook cards here as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Player Modal -->
+    <div id="videoPlayerModal">
+      <button class="close-btn-modal" onclick="closeVideo()" aria-label="Close video player"><i class="fas fa-times"></i></button>
+      <iframe src="" title="Video Player" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer id="main-footer-bottom">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo animate-on-scroll" data-animation-type="fadeInLeft">
+                    <img src="astro.png" alt="AstroSatvik Logo" />
+                </div>
+                <nav class="footer-links animate-on-scroll" data-animation-type="fadeInUp">
+                    <a href="index.html">Home</a>
+                    <a href="term.html" target="_blank">Terms & Conditions</a>
+                    <a href="us.html">Consult Us</a>
+                    <a href="about.html">About Us</a>
+                    <a href="help.html">Help</a>
+                </nav>
+                <div class="social-media-links animate-on-scroll" data-animation-type="fadeInRight">
+                    <a href="https://www.facebook.com/Astro.Satvik.26.2001" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/astro.satvik/?next=%2F" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/@AstroSatvik026" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="copyright animate-on-scroll" data-animation-type="fadeIn">
+                <p>© <span id="currentYear"></span> AstroSatvik. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 
-	<script>
-const navBtn = document.querySelector('.menu-btn')
-const navList = document.querySelector('.nav-list')
-
-navBtn.addEventListener('click', function(){
-	navList.classList.toggle('active')
-	
-});
-// Close the navbar if user clicks outside of it
-document.addEventListener('click', function(event) {
-    const isClickInside = navList.contains(event.target) || navBtn.contains(event.target);
-
-    if (!isClickInside) {
-        navList.classList.remove('active');
-    }
-});
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 8000); // Change image every 2 seconds
-}
-
-function toggleMenu() {
-    var toggleMenu = document.getElementById('toggleMenu');
-    if (toggleMenu.style.display === 'none' || toggleMenu.style.display === '') {
-      toggleMenu.style.display = 'block';
-    } else {
-      toggleMenu.style.display = 'none';
-    }
-  }
-
-  document.addEventListener('click', function(event) {
-    var toggleMenu = document.getElementById('toggleMenu');
-    var toggleButton = document.querySelector('button[onclick="toggleMenu()"]');
-    var isClickInside = toggleMenu.contains(event.target) || toggleButton.contains(event.target);
-
-    if (!isClickInside) {
-      toggleMenu.style.display = 'none';
-    }
-  });
-
-  function openVideo(url) {
-    var videoPlayer = document.getElementById('videoPlayer');
-    var iframe = videoPlayer.querySelector('iframe');
-    iframe.src = url;
-    videoPlayer.style.display = 'block';
-  }
-
-  function closeVideo() {
-    var videoPlayer = document.getElementById('videoPlayer');
-    var iframe = videoPlayer.querySelector('iframe');
-    iframe.src = '';
-    videoPlayer.style.display = 'none';
-  }
-</script>
-
+    <script src="script.js"></script>
 </body>
-
-</html>7
+</html>
