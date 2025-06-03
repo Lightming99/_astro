@@ -1,57 +1,66 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Background Image Cycling
-    const backgroundImages = ["mata.webp", "maa.jpg", "matas.jpg"];
-    let currentImageIndex = 0;
-    const backgroundElement = document.querySelector(".section-background");
-  
-    if (backgroundElement) {
-      setInterval(() => {
-        currentImageIndex = (currentImageIndex + 1) % backgroundImages.length;
-        backgroundElement.style.backgroundImage = `url(${backgroundImages[currentImageIndex]})`;
-      }, 5000);
+    // --- Mobile Navigation Toggle ---
+    const menuBtn = document.querySelector(".menu-btn-light"); // Matched class
+    const navList = document.querySelector(".nav-list-light"); // Matched class
+    const navLinks = document.querySelectorAll(".nav-list-light a");
+
+    if (menuBtn && navList) {
+        menuBtn.addEventListener("click", () => {
+            const isActive = navList.classList.toggle("active");
+            menuBtn.classList.toggle("active");
+            menuBtn.setAttribute('aria-expanded', isActive);
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                if (navList.classList.contains("active")) {
+                    navList.classList.remove("active");
+                    menuBtn.classList.remove("active");
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+        
+        document.addEventListener("click", (event) => {
+            if (navList.classList.contains("active")) {
+                const isClickInsideNav = navList.contains(event.target);
+                const isClickOnMenuBtn = menuBtn.contains(event.target);
+                if (!isClickInsideNav && !isClickOnMenuBtn) {
+                    navList.classList.remove("active");
+                    menuBtn.classList.remove("active");
+                    menuBtn.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
     }
-  
-    // Scroll Reveal Animation
-    const revealElements = document.querySelectorAll(".reveal-section, .reveal-item");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    });
-  
-    revealElements.forEach((element) => observer.observe(element));
-  
-    // Smooth Scroll Navigation
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", (e) => {
-        e.preventDefault();
-        document.querySelector(anchor.getAttribute("href")).scrollIntoView({ behavior: "smooth" });
-      });
-    });
-  
-    // Nav Toggle for Mobile
-    const menuBtn = document.querySelector(".menu-btn");
-    const navList = document.querySelector(".nav-list");
-    const menuBtnBurger = document.querySelector(".menu-btn__burger");
-  
-    menuBtn.addEventListener("click", () => {
-      navList.classList.toggle("active");
-      menuBtn.classList.toggle("active");
-  
-      menuBtnBurger.classList.toggle("menu-btn__burger");
-      menuBtnBurger.classList.toggle("menu-btn__cross");
-    });
-  
-    document.addEventListener("click", (event) => {
-      if (!navList.contains(event.target) && !menuBtn.contains(event.target)) {
-        navList.classList.remove("active");
-        menuBtn.classList.remove("active");
-        menuBtnBurger.classList.add("menu-btn__burger");
-        menuBtnBurger.classList.remove("menu-btn__cross");
-      }
-    });
-  
-    // Review Slider
+
+    // --- Scroll Reveal Animation (Intersection Observer) ---
+    const revealElements = document.querySelectorAll(".animate-on-scroll");
+    
+    if (revealElements.length > 0) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    const delay = entry.target.dataset.animationDelay || '0s';
+                    entry.target.style.transitionDelay = delay;
+                    entry.target.classList.add("is-visible");
+                } else {
+                    // Optional: To re-animate if scrolling up
+                     entry.target.classList.remove("is-visible");
+                     entry.target.style.transitionDelay = '0s';
+                }
+            });
+        }, { threshold: 0.05 });
+
+        revealElements.forEach((element) => observer.observe(element));
+    }
+
+    // --- Update Copyright Year ---
+    const currentYearSpan = document.getElementById('currentYearAboutLight'); // Updated ID
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+});
