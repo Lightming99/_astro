@@ -614,3 +614,175 @@ h4 { font-size: clamp(1.2rem, 3vw, 1.5rem); color: var(--cp-text-primary); }
 .animate-on-scroll[data-animation-type="fadeInLeft"] { transform: translateX(-40px); } /* Note: Changed to negative for left entry */
 .animate-on-scroll[data-animation-type="fadeInRight"] { transform: translateX(40px); }/* Note: Changed to positive for right entry */
 .animate-on-scroll[data-animation-type="zoomIn"] { transform: scale(0.9); }
+/* --- DASHAS COURSE SECTION STYLES --- */
+#dasha-course-section {
+    background-color: var(--cp-bg-primary);
+    color: var(--cp-text-primary);
+    padding: 80px 20px;
+    font-family: var(--cp-font-main);
+}
+
+.cp-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cp-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cp-header h2 {
+    font-size: 36px;
+    font-family: var(--cp-font-heading);
+    color: var(--cp-accent-gold);
+}
+
+.cp-subtitle {
+    font-size: 18px;
+    color: var(--cp-text-secondary);
+    margin-top: 10px;
+}
+
+.cp-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.cp-image-wrapper {
+    flex: 1 1 40%;
+}
+
+.cp-course-image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--cp-shadow-card);
+}
+
+.cp-details-content {
+    flex: 1 1 55%;
+}
+
+.cp-details-content h3 {
+    font-size: 28px;
+    color: var(--cp-accent-blue);
+    margin-bottom: 20px;
+    font-family: var(--cp-font-heading);
+}
+
+.cp-course-highlights {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    color: var(--cp-text-primary);
+}
+
+.cp-course-highlights li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.cp-course-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+    font-size: 15px;
+    color: var(--cp-text-secondary);
+}
+
+.cp-price-box {
+    background: var(--cp-bg-secondary);
+    border-left: 5px solid var(--cp-accent-gold);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: var(--cp-shadow-card);
+}
+
+.cp-price-title {
+    font-size: 18px;
+    color: var(--cp-text-primary);
+    margin-bottom: 5px;
+}
+
+.cp-current-price {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--cp-accent-gold);
+}
+
+.cp-installment-note {
+    font-size: 14px;
+    color: var(--cp-text-secondary);
+    margin-top: 8px;
+}
+
+.cp-btn-whatsapp {
+    background-color: var(--cp-accent-green);
+    color: white;
+    padding: 14px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: var(--cp-shadow-button);
+    transition: background 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cp-btn-whatsapp i {
+    margin-right: 10px;
+}
+
+.cp-btn-whatsapp:hover {
+    background-color: #2e9842;
+}
+
+.cp-note {
+    font-size: 14px;
+    color: var(--cp-accent-gold);
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* --- ANIMATIONS --- */
+.animate-fadeInUp {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+}
+
+.animate-fadeInLeft {
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 1s 0.2s ease forwards;
+}
+
+.animate-fadeInRight {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: fadeInRight 1s 0.4s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInLeft {
+    to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .cp-layout {
+        flex-direction: column;
+    }
+}
