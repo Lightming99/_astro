@@ -575,3 +575,150 @@ h3 { font-size: clamp(1.5rem, 4vw, 1.75rem); color: var(--accent-primary); }
     .social-media-links a { font-size: 1.4rem; }
     .copyright p { font-size: 0.85rem; }
 }
+/* Astro Dasha Course Section */
+#dasha-course-section {
+    padding: 80px 20px;
+    background-color: #f9f6f0;
+    color: #2c2c2c;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.astro-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.astro-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.astro-header h2 {
+    font-size: 36px;
+    color: #6b3f2d;
+    font-weight: bold;
+}
+
+.astro-subtitle {
+    font-size: 18px;
+    color: #444;
+    margin-top: 10px;
+}
+
+.astro-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.astro-image-wrapper {
+    flex: 1 1 40%;
+    text-align: center;
+}
+
+.astro-course-image {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.astro-details-content {
+    flex: 1 1 55%;
+}
+
+.astro-details-content h3 {
+    font-size: 28px;
+    color: #3e2d1e;
+    margin-bottom: 20px;
+}
+
+.course-highlights {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.course-highlights li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.course-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 20px;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+.astro-price-info {
+    background: #ffefdb;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.price-heading {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #703c2b;
+    margin-bottom: 5px;
+}
+
+.current-fee {
+    font-size: 20px;
+    font-weight: bold;
+    color: #b13c1e;
+}
+
+.installment-info {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.btn-enroll-now {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 14px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn-enroll-now i {
+    margin-right: 8px;
+}
+
+.btn-enroll-now:hover {
+    background-color: #1ebe5a;
+}
+
+.astro-note {
+    font-size: 14px;
+    color: #a33;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .astro-layout {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .course-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
