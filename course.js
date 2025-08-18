@@ -274,4 +274,143 @@ document.addEventListener('DOMContentLoaded', () => {
             item.style.transform = 'translateX(0) scale(1)';
         });
     });
+
+    // Professional card hover effects for benefits section
+    const benefitCards = document.querySelectorAll('.benefit-card');
+    benefitCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transition = 'all 0.4s cubic-bezier(0.23, 1, 0.320, 1)';
+        });
+    });
+
+    // Enhanced navigation with smooth transitions
+    const enhancedNavLinks = document.querySelectorAll('.nav-link');
+    enhancedNavLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                }
+            }
+        });
+    });
+
+    // Professional loading animation for sections
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const enhancedObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.willChange = 'transform, opacity';
+                setTimeout(() => {
+                    entry.target.style.willChange = 'auto';
+                }, 1000);
+            }
+        });
+    }, observerOptions);
+
+    // Apply enhanced observer to all animated elements
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+        enhancedObserver.observe(el);
+    });
+
+    // Professional button interactions
+    const ctaButtons = document.querySelectorAll('.btn');
+    ctaButtons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            button.style.transform = 'translateY(-2px)';
+            button.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.3)';
+        });
+        
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = 'translateY(0)';
+            button.style.boxShadow = '';
+        });
+        
+        button.addEventListener('mousedown', () => {
+            button.style.transform = 'translateY(1px)';
+        });
+        
+        button.addEventListener('mouseup', () => {
+            button.style.transform = 'translateY(-2px)';
+        });
+    });
+
+    // Special effects for rainbow buttons
+    const rainbowButtons = document.querySelectorAll('.btn-enroll-main');
+    rainbowButtons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            button.style.animationDuration = '1s';
+            
+            // Create ripple effect
+            const ripple = document.createElement('span');
+            ripple.style.cssText = `
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.6);
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                pointer-events: none;
+            `;
+            
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = '50%';
+            ripple.style.top = '50%';
+            ripple.style.marginLeft = -size/2 + 'px';
+            ripple.style.marginTop = -size/2 + 'px';
+            
+            button.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
+        });
+        
+        button.addEventListener('mouseleave', () => {
+            button.style.animationDuration = '3s';
+        });
+    });
+
+    // Testimonial cards animation on scroll
+    const testimonialCards = document.querySelectorAll('.testimonial-card');
+    const testimonialObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }, index * 200);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    testimonialCards.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(50px)';
+        card.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        testimonialObserver.observe(card);
+    });
+
+    // Add CSS for ripple animation
+    const rippleStyle = document.createElement('style');
+    rippleStyle.textContent = `
+        @keyframes ripple {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    `;
+    document.head.appendChild(rippleStyle);
 });
