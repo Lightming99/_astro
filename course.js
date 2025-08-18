@@ -195,4 +195,83 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
     }
+
+    // --- Read More / Read Less Functionality ---
+    const readMoreBtn = document.getElementById('read-more-btn');
+    const courseSummary = document.getElementById('course-summary');
+    const courseDetails = document.getElementById('course-details');
+    const btnText = readMoreBtn?.querySelector('.btn-text');
+
+    if (readMoreBtn && courseSummary && courseDetails && btnText) {
+        readMoreBtn.addEventListener('click', () => {
+            const isExpanded = courseDetails.style.display === 'block';
+            
+            if (isExpanded) {
+                courseDetails.style.display = 'none';
+                courseSummary.style.display = 'block';
+                btnText.textContent = 'Read More';
+                readMoreBtn.classList.remove('expanded');
+            } else {
+                courseDetails.style.display = 'block';
+                courseSummary.style.display = 'none';
+                btnText.textContent = 'Read Less';
+                readMoreBtn.classList.add('expanded');
+                
+                // Smooth scroll to show expanded content
+                setTimeout(() => {
+                    courseDetails.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        });
+    }
+
+    // --- Smooth Scroll to Course Section ---
+    const exploreCoursesBtn = document.querySelector('.btn-hero-primary');
+    const courseSection = document.getElementById('course-section-heading');
+
+    if (exploreCoursesBtn && courseSection) {
+        exploreCoursesBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            // Add highlighting effect
+            courseSection.style.transform = 'scale(1.05)';
+            courseSection.style.transition = 'transform 0.3s ease';
+            setTimeout(() => {
+                courseSection.style.transform = 'scale(1)';
+            }, 300);
+            
+            courseSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+    }
+
+    // Add floating animation to course illustration
+    const courseImg = document.querySelector('.course-illustration');
+    if (courseImg) {
+        let floatDirection = 1;
+        setInterval(() => {
+            courseImg.style.transform += ` translateY(${floatDirection * 2}px)`;
+            floatDirection *= -1;
+        }, 2000);
+    }
+
+    // Add parallax effect to floating stars
+    const stars = document.querySelectorAll('.star');
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        stars.forEach((star, index) => {
+            const speed = (index + 1) * 0.1;
+            star.style.transform = `translateY(${scrolled * speed}px)`;
+        });
+    });
+
+    // Add hover effects to topic items
+    const topicItems = document.querySelectorAll('.topic-item');
+    topicItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            item.style.transform = 'translateX(10px) scale(1.02)';
+        });
+        
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'translateX(0) scale(1)';
+        });
+    });
 });
